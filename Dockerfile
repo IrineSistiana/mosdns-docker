@@ -16,7 +16,7 @@ LABEL maintainer="IrineSistiana <github.com/IrineSistiana>"
 
 COPY --from=builder /root/mosdns/mosdns /usr/bin/
 
-RUN apk add --no-cache ca-certificates \
+RUN apk add --no-cache ca-certificates tzdata \
 	&& mkdir /etc/mosdns
 
 VOLUME /etc/mosdns
